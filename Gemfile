@@ -51,6 +51,7 @@ group :development, :test do
 
   # Linting
   gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
 
   # [7] Testing
   gem 'rspec-rails', '~> 5.0.2'
