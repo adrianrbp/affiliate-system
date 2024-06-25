@@ -49,6 +49,9 @@ group :development, :test do
   # Fixures - Fake Data
   gem 'faker', '~> 2.19.0'
 
+  # Linting
+  gem 'rubocop', require: false
+
   # [7] Testing
   gem 'rspec-rails', '~> 5.0.2'
 
