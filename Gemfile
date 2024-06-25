@@ -51,6 +51,10 @@ group :development, :test do
 
   # [7] Testing
   gem 'rspec-rails', '~> 5.0.2'
+
+  # Auto-run on Modifications
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 group :development do
