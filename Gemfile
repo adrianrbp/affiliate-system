@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 
 # [1] Back-End
-gem 'rails', '~> 6.1.0'
-gem "ffi", "< 1.17.0"
+gem 'rails', '~> 6.1.7', '>= 6.1.7.8'
+gem 'ffi', "< 1.17.0"
 
 # [2] Storage
 gem 'sqlite3', '~> 1.4.2'
@@ -19,15 +19,7 @@ gem 'sqlite3', '~> 1.4.2'
 
 # [2.1] APIs
 # JSON APIs 
-gem 'jbuilder', '~> 2.7'
-
-# [3] Front-End
-# SCSS for stylesheets
-gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript.
-gem 'webpacker', '~> 5.0'
-# Faster navigation.
-gem 'turbolinks', '~> 5'
+# gem 'jbuilder', '~> 2.7'
 
 # [4] Deployment
 # App server
@@ -36,7 +28,8 @@ gem 'puma', '~> 5.0'
 # [5] Config
 # Caching: Reduces boot time
 gem 'bootsnap', '>= 1.4.4', require: false
-
+# Handle Cross-Origin Resource Sharing (CORS)
+# gem 'rack-cors'
 
 group :development, :test do
   # [6] Tools
@@ -63,10 +56,6 @@ end
 
 group :development do
   # [6] Tools
-  # Debug: interactive console on exception pages
-  gem 'web-console', '>= 4.1.0'
-  # Profiling toolkit: Display Perf. Info.
-  gem 'rack-mini-profiler', '~> 2.0'
   # File modifications
   gem 'listen', '~> 3.3'
   # Pre-load app for console, rake and tests.
